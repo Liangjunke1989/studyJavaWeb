@@ -13,7 +13,7 @@ public class JDBCDemo {
         //Class.forName("com.mysql.jdbc.Driver");
         //02、获取连接u
         //String url="jdbc:mysql://127.0.0.1:3306/db1";
-        String url="jdbc:mysql:///db1?useSSL=false";
+        String url="jdbc:mysql:///db1";
         String username="root";
         String password="liang521";
         Connection conn = DriverManager.getConnection(url, username, password);
