@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 /**
- * JDBC快速入门
+ * JavaWeb第一天：JDBC快速入门
  */
 public class JDBCDemo {
     public static void main(String[] args) throws Exception{
