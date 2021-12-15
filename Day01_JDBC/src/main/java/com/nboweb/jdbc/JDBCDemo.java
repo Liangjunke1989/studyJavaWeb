@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class JDBCDemo {
     public static void main(String[] args) throws Exception{
         //01、注册驱动
-        //Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.jdbc.Driver");
         //02、获取连接u
         //String url="jdbc:mysql://127.0.0.1:3306/db1";
         String url="jdbc:mysql:///db1";
