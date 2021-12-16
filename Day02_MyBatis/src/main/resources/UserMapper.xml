@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:命名空间
+-->
+<mapper namespace="testLJK">
+    <!--
+        id：select的唯一标识
+        resultType：为返回的结果类型
+    -->
+    <select id="selectAll" resultType="com.nboweb.pojo.User">
+        select * from tb_user;
+    </select>
+
+</mapper>
