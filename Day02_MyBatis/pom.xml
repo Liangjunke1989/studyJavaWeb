@@ -14,11 +14,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.weicoder</groupId>
-            <artifactId>druid</artifactId>
-            <version>3.3.8-jdk8</version>
-        </dependency>
         <!--mybatis 依赖-->
         <dependency>
             <groupId>org.mybatis</groupId>

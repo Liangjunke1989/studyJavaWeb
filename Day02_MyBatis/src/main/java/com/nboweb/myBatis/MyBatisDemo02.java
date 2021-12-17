@@ -1,5 +1,6 @@
 package com.nboweb.myBatis;
 
+import com.nboweb.mapper.UserMapper;
 import com.nboweb.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -10,11 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-/**
- * MyBatis 快速入门代码
- */
-
-public class MyBatisDemo {
+public class MyBatisDemo02 {
     public static void main(String[] args) throws IOException {
         //1、加载mybatis 的核心配置文件，获取SqlSessionFactory对象
         System.out.println(System.getProperty("user.dir"));
@@ -26,7 +23,10 @@ public class MyBatisDemo {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         //3、执行sql语句----核心
-        List<User> users = sqlSession.selectList("testLJK.selectAll");
+        //List<User> users = sqlSession.selectList("testLJK.selectAll");
+        //3.1 获取UserMapper接口的代理对象
+        UserMapper iuserMapper = sqlSession.getMapper(UserMapper.class);
+        List<User> users = iuserMapper.selectAll();
         System.out.println(users);
 
         //4、释放资源

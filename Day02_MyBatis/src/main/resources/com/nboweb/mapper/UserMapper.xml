@@ -5,13 +5,18 @@
 <!--
     namespace:命名空间
 -->
-<mapper namespace="testLJK">
+<mapper namespace="com.nboweb.mapper.UserMapper">
+    <!--statement-->
     <!--
         id：select的唯一标识
         resultType：为返回的结果类型
     -->
+    <!--statement 与接口的方法要对应映射起来，即名字要一样-->
     <select id="selectAll" resultType="com.nboweb.pojo.User">
         select * from tb_user;
     </select>
-
+    <select id="selectById" resultType="com.nboweb.pojo.User">
+        select *
+        from tb_user where id=#{id};
+    </select>
 </mapper>

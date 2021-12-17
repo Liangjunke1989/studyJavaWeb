@@ -16,7 +16,9 @@
         </environment>
     </environments>
     <mappers>
-        <!--加载sql映射文件-->
-        <mapper resource="UserMapper.xml"/>
+        <!--加载 sql映射文件-->
+        <!--<mapper resource="com/nboweb/mapper/UserMapper.xml"/>-->
+        <!--Mapper 代理方式-->
+        <package name="com.nboweb.mapper"/>
     </mappers>
 </configuration>
