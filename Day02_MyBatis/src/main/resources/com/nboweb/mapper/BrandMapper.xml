@@ -33,8 +33,7 @@
     </resultMap>
     <!--查询：查询所有-->
     <select id="selectAll" resultMap="brandResultMap">
-        select
-        *
+        select *
         from tb_brand;
     </select>
     <!--查询：查询详情-->
@@ -58,19 +57,71 @@
     -->
     <select id="selectById" parameterType="int" resultMap="brandResultMap">
         select *
-        from tb_brand where id
+        from tb_brand
+        where id
         <![CDATA[
             =
         ]]>
         #{id};
     </select>
 
+
     <!--查询： 条件查询：多条件查询-->
+    <!--    <select id="selectByCondition" resultMap="brandResultMap">-->
+    <!--        select *-->
+    <!--        from tb_brand-->
+    <!--        where status=#{status}-->
+    <!--          and company_name like #{companyName}-->
+    <!--          and brand_name like #{brandName}-->
+    <!--    </select>-->
+
+
+    <!--查询： 条件查询：多条件动态查询-->
+    <!--
+        动态条件查询：
+            if：条件判断
+                test：逻辑表达式
+            问题：
+                多条件的 "and" 连接的使用？
+                1、恒等式的加入
+                2、where标签
+
+    -->
     <select id="selectByCondition" resultMap="brandResultMap">
         select *
         from tb_brand
-        where status=#{status}
-          and company_name like #{companyName}
-          and brand_name like #{brandName}
+        /*where 1=1*/
+        <where>
+            <if test="status!=null">
+                and status=#{status}
+            </if>
+            <if test="companyName!=null and companyName!=''">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName!=null and brandName!=''">
+                and brand_name like #{brandName}
+            </if>
+        </where>
     </select>
+    <!--
+        查询：单条件动态查询
+    -->
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        <where>
+            <choose>
+                <when test="status!=null">/*相当于case*/
+                    status=#{status}
+                </when>
+                <when test="companyName!=null and companyName!=''">/*相当于case*/
+                    company_name like #{companyName}
+                </when>
+                <when test="brandName!=null and brandName!=''">/*相当于case*/
+                    brand_name like #{brandName}
+                </when>
+            </choose>
+        </where>
+    </select>
+
 </mapper>
