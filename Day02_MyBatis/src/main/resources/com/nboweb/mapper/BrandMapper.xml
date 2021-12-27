@@ -31,6 +31,8 @@
         <result column="brand_name" property="brandName"/>
         <result column="company_name" property="companyName"/>
     </resultMap>
+
+
     <!--查询：查询所有-->
     <select id="selectAll" resultMap="brandResultMap">
         select *
@@ -124,4 +126,73 @@
         </where>
     </select>
 
+    <!--添加-->
+    <insert id="add01">
+        insert into tb_brand (brand_name, company_name, ordered, description, status)
+        values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    </insert>
+
+    <!--添加: 主键返回-->
+    <insert id="add02" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_brand (brand_name, company_name, ordered, description, status)
+        values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    </insert>
+
+    <!--修改-->
+    <update id="update">
+        update tb_brand
+        <set>
+            <if test="brandName!=null and brandName!=''">
+                brand_name=#{brandName},
+            </if>
+            <if test="companyName!=null and companyName!=''">
+                company_name=#{companyName},
+            </if>
+            <if test="ordered!=null and ordered!=''">
+                ordered=#{ordered},
+            </if>
+            <if test="description!=null and description!=''">
+                description=#{description},
+            </if>
+            <if test="status!=null">
+                status=#{status},
+            </if>
+        </set>
+        where id=#{id};
+    </update>
+
+    <!--删除-->
+    <delete id="deleteById">
+        delete
+        from tb_brand
+        where id = #{id};
+    </delete>
+    <!--
+        批量删除:
+            mybatis 会将数组参数，封装为一个Map集合。
+            * 默认：array = 数组
+            * 使用@Param注解改变map集合默认key的名称
+    -->
+
+    <delete id="deleteByIds">
+        delete
+        from tb_brand
+        where id
+        in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        ;
+    </delete>
+
+    <delete id="deleteByIds02">
+        delete
+        from tb_brand
+        where id
+        in
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        ;
+    </delete>
 </mapper>
