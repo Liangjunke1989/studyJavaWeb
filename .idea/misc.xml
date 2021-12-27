@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Day03_Tomcat" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Day01_JDBC/pom.xml" />
         <option value="$PROJECT_DIR$/Day02_MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Day03_Tomcat/pom.xml" />
       </list>
     </option>
   </component>
