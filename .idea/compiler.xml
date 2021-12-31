@@ -9,14 +9,14 @@
         <module name="Day02_MyBatis" />
         <module name="Day01_JDBC" />
         <module name="Day03_Tomcat" />
-        <module name="Day03_Tomcat02" />
+        <module name="Day03_Tomcat+Servlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Day01_JDBC" target="17" />
       <module name="Day02_MyBatis" target="17" />
       <module name="Day03_Tomcat" target="1.5" />
-      <module name="Day03_Tomcat02" target="17" />
+      <module name="Day03_Tomcat+Servlet" target="17" />
       <module name="studyJavaWeb" target="17" />
     </bytecodeTargetLevel>
   </component>

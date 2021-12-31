@@ -1,0 +1,62 @@
+package com.nboweb.web;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import java.io.IOException;
+
+@WebServlet(urlPatterns="/demo03",loadOnStartup = 0)
+public class ServletDemo03 implements Servlet {
+    private ServletConfig config;
+    /**
+     * 初始化方法
+     *  1、调用时机：默认情况下，Servlet被第一次访问时，调用
+     *      *loadOnStartup:
+     *          默认值为：-1
+     *          0或正整数：在服务器启动时，被访问
+     *
+     *  2、调用次数：1次
+     * @param servletConfig
+     * @throws ServletException
+     */
+    @Override
+    public void init(ServletConfig servletConfig) throws ServletException {
+        this.config=servletConfig;
+        System.out.println("init...");
+    }
+
+    @Override
+    public ServletConfig getServletConfig() {
+        return config;
+    }
+
+    /**
+     * 提供服务
+     *     1、调用时机：每一次Servlet被访问时，调用
+     *     2、调用次数：n次
+     *
+     * @param servletRequest
+     * @param servletResponse
+     * @throws ServletException
+     * @throws IOException
+     */
+    @Override
+    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+        System.out.println("Servlet LJK_HelloWorld!!!");
+    }
+
+    @Override
+    public String getServletInfo() {
+        return config.getServletName();
+
+    }
+
+    /**
+     * 销毁方法
+     *   1、调用时机：内存释放的时候或者服务器关闭的时候，Servlet对象会被销毁，调用
+     *   2、调用次数：1次
+     */
+    @Override
+    public void destroy() {
+        System.out.println("destroy...");
+    }
+}

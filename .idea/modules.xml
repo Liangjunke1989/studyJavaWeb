@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Day01_JDBC/Day01_JDBC.iml" filepath="$PROJECT_DIR$/Day01_JDBC/Day01_JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day02_MyBatis/Day02_MyBatis.iml" filepath="$PROJECT_DIR$/Day02_MyBatis/Day02_MyBatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day03_Tomcat01/Day03_Tomcat.iml" filepath="$PROJECT_DIR$/Day03_Tomcat01/Day03_Tomcat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Day03_Tomcat02/Day03_Tomcat02.iml" filepath="$PROJECT_DIR$/Day03_Tomcat02/Day03_Tomcat02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day03_Tomcat+Servlet/Day03_Tomcat+Servlet.iml" filepath="$PROJECT_DIR$/Day03_Tomcat+Servlet/Day03_Tomcat+Servlet.iml" />
     </modules>
   </component>
 </project>

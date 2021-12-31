@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Day03_Tomcat" />
+          <element id="module-output" name="Day03_Tomcat+Servlet" />
         </element>
       </element>
       <element id="directory" name="META-INF">
