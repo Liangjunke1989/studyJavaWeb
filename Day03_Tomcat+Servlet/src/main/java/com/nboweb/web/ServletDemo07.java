@@ -12,7 +12,7 @@ import java.io.IOException;
  *      * 精确匹配：/user/select
  *      * 目录匹配：/user/*
  *      * 扩展名匹配： *.do
- *      * 任意匹配: /
+ *      * 任意匹配: /              ------不要自己配置
  */
 @WebServlet(urlPatterns = "/user/select")
 public class ServletDemo07 extends HttpServlet {
