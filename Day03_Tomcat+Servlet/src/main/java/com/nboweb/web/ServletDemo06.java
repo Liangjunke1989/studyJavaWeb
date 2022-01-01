@@ -7,15 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/demo04")
-public class ServletDemo04 extends HttpServlet {
+/**
+ * urlPattern:一个Servlet可以配置多个访问路径
+ */
+@WebServlet(urlPatterns = {"/demo06","/demo07"})
+public class ServletDemo06 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("get...."); //请求方式处理逻辑
+        System.out.println("get...");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("post..."); //请求方式处理逻辑
+        System.out.println("post...");
     }
 }

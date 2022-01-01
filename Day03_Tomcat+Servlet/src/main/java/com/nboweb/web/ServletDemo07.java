@@ -7,15 +7,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/demo04")
-public class ServletDemo04 extends HttpServlet {
+/**
+ * urlPatterns:
+ *      * 精确匹配：/user/select
+ *      * 目录匹配：/user/*
+ *      * 扩展名匹配： *.do
+ *      * 任意匹配: /
+ */
+@WebServlet(urlPatterns = "/user/select")
+public class ServletDemo07 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("get...."); //请求方式处理逻辑
+        System.out.println("demo07 get...");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("post..."); //请求方式处理逻辑
+        System.out.println("demo07 post...");
     }
 }
