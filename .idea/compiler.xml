@@ -10,6 +10,7 @@
         <module name="Day01_JDBC" />
         <module name="Day03_Tomcat" />
         <module name="Day03_Tomcat+Servlet" />
+        <module name="Day04_RequestAndResponse" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,8 @@
       <module name="Day02_MyBatis" target="17" />
       <module name="Day03_Tomcat" target="1.5" />
       <module name="Day03_Tomcat+Servlet" target="17" />
+      <module name="Day04_Request&amp;Response" target="1.7" />
+      <module name="Day04_RequestAndResponse" target="17" />
       <module name="studyJavaWeb" target="17" />
     </bytecodeTargetLevel>
   </component>
