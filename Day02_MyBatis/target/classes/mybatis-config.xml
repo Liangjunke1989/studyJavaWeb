@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <typeAliases>
+            <package name=""/>
+        </typeAliases>
+        <!--
+        environments:配置数据库连接环境信息。可以配置多个environments。
+        通过default属性切换不同的environments。
+        -->
+        <environment id="development">
+            <transactionManager type="JDBC"/><!--事务管理-->
+            <dataSource type="POOLED"><!--后期会被springboot接管-->
+                <!--数据库连接信息-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///db1?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="liang521"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--加载 sql映射文件-->
+        <!--<mapper resource="com/nboweb/mapper/UserMapper.xml"/>-->
+        <!--Mapper 代理方式-->
+        <package name="com.nboweb.mapper"/>
+    </mappers>
+</configuration>

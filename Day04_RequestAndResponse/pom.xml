@@ -4,8 +4,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.nboweb</groupId>
-  <artifactId>Day04_RequestAndResponse</artifactId>
+  <!-- 当前项目的坐标-->
+  <groupId>com.nboweb</groupId><!--  组的名称-->
+  <artifactId>Day04_RequestAndResponse</artifactId><!--  模块的名称-->
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
@@ -14,6 +15,7 @@
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
+  <!--导入依赖-->
   <dependencies>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -36,8 +38,6 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.25</version>
     </dependency>
-
-
   </dependencies>
 
   <build>

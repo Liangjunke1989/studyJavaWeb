@@ -4,9 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <environments default="development">
-        <typeAliases>
-            <package name=""/>
-        </typeAliases>
         <!--
         environments:配置数据库连接环境信息。可以配置多个environments。
         通过default属性切换不同的environments。
