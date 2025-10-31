@@ -3,16 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+<!--    什么是 Artifact
+        定义：Artifact 是 Maven 项目中的基本构建单元，
+            通常是一个文件，如 JAR、WAR、ZIP 或其他类型的文件
+        唯一标识：每个 artifact 都由以下坐标唯一标识：
+            groupId：组织或项目的唯一标识符
+            artifactId：项目中的特定模块或组件的名称
+            version：版本号
+            packaging（可选）：打包类型（如 jar、war 等）
+            classifier（可选）：附加标识符   -->
     <groupId>com.nboweb</groupId>
-    <artifactId>Day01_JDBC</artifactId>
+    <artifactId>Day01_JDBC</artifactId><!--模块名称-->
     <version>1.0-SNAPSHOT</version>
     <!-- 导入依赖-->
     <dependencies>
+        <!-- JUnit自动化测试-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
+           <scope>test</scope><!-- 测试环境有效-->
         </dependency>
         <!-- Druid数据库连接池 -->
         <dependency>

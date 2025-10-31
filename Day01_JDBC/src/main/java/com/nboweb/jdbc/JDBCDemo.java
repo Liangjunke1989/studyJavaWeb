@@ -14,7 +14,7 @@ public class JDBCDemo {
         //02、获取连接u
         // String url="jdbc:mysql://127.0.0.1:3306/db1";//协议、地址、数据库名
         // String url="jdbc:mysql:///db1";//协议、数据库名
-        String url="jdbc:mysql:///db1?useSSL=false";//协议、数据库名,添加参数
+        String url="jdbc:mysql:///db1?useSSL=false&allowPublicKeyRetrieval=true";//协议、数据库名,添加参数
         String username="root";
         String password="liang521";
         Connection conn = DriverManager.getConnection(url, username, password);
